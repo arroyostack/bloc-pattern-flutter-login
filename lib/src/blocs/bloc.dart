@@ -11,6 +11,7 @@ class Bloc with Validators {
 
   // Change data
   Function(String) get changeEmail => _email.sink.add;
+  Function(String) get changePassword => _password.sink.add;
 
   // Dispose Sink. It's a good practice to close the stream when it's not in use.
   dispose() {
@@ -18,3 +19,5 @@ class Bloc with Validators {
     _password.close();
   }
 }
+
+final bloc = Bloc();
