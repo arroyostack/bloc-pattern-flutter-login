@@ -40,7 +40,7 @@ class LoginScreen extends StatelessWidget {
   }
 
   Widget passwordField() {
-    return StreamBuilder(
+    return StreamBuilder<String?>(
         stream: bloc.password,
         builder: (context, snapshot) {
           return TextField(
