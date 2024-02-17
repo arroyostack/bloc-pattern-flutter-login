@@ -6,22 +6,44 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        margin: const EdgeInsets.all(20),
-        child: const Column(
+      margin: const EdgeInsets.all(20),
+      child: Form(
+        child: Column(
           children: [
-            TextField(
-              decoration: InputDecoration(labelText: "Username"),
-            ),
-            TextField(
-              decoration: InputDecoration(labelText: "Password"),
-              obscureText: true,
-            ),
-            SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: null,
-              child: Text("Login"),
-            ),
+            emailField(),
+            passwordField(),
+            Container(margin: const EdgeInsets.only(top: 25)),
+            submitButton(),
           ],
-        ));
+        ),
+      ),
+    );
   }
+
+  Widget emailField() {
+    return const TextField(
+        decoration: InputDecoration(
+      labelText: "Email Address",
+      hintText: " you@example.com", // This is a hint for the user
+    ));
+  }
+
+  Widget passwordField() {
+    return const TextField(
+      decoration: InputDecoration(
+        labelText: "Password",
+        hintText: "Password",
+      ),
+    );
+  }
+}
+
+Widget submitButton() {
+  return ElevatedButton(
+    style: ElevatedButton.styleFrom(
+      backgroundColor: Colors.blue, // Add the color property here
+    ),
+    child: const Text("Login"),
+    onPressed: () {},
+  );
 }
