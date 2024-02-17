@@ -24,7 +24,7 @@ class LoginScreen extends StatelessWidget {
     return const TextField(
         decoration: InputDecoration(
       labelText: "Email Address",
-      hintText: " you@example.com", // This is a hint for the user
+      hintText: " you@example.com",
     ));
   }
 
