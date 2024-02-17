@@ -4,6 +4,7 @@ import "bloc.dart";
 class Provider extends InheritedWidget {
   final Bloc bloc = Bloc();
 
+// Thos forwards keys to the super class.
   Provider({Key? key, required Widget child}) : super(key: key, child: child);
 
   @override
